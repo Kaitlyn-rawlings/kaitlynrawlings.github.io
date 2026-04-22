@@ -30,7 +30,7 @@ Restoration Ecology & GIS Portfolio Site · Built for GitHub Pages
 
 ## 🔒 Password
 
-The current password is: `watershed2027`
+The current password is: ``
 
 To change it, open `js/main.js` and edit line 7:
 ```js
