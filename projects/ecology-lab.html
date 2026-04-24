@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bever-Schultz Ecology Lab — Kaitlyn Rawlings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .pp { max-width: 1400px; margin: 0 auto; padding: 8rem 3rem 5rem; position: relative; z-index: 1; }
+
+    .project-back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); text-decoration: none; margin-bottom: 2.5rem; transition: color 0.2s; }
+    .project-back:hover { color: var(--sand); }
+    .project-back svg { width: 14px; height: 14px; }
+
+    /* HEADER + HERO SIDE BY SIDE */
+    .header-hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    .ph h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3.5vw, 44px); color: var(--cream); font-weight: 400; line-height: 1.15; margin-bottom: 1.25rem; }
+    .pmeta { display: flex; flex-wrap: wrap; gap: 1.5rem; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 0; }
+    .mi { display: flex; flex-direction: column; gap: 0.2rem; }
+    .ml { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); }
+    .mv { font-size: 12px; color: rgba(232,226,217,0.8); }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 3px;
+      border: 1px solid var(--line);
+      display: block;
+      max-height: 280px;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+
+    /* MAIN CONTENT */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 3rem;
+    }
+
+    .ptxt { font-size: 15px; color: rgba(232,226,217,0.78); line-height: 1.9; margin-bottom: 1.25rem; }
+    .ptxt ol { padding-left: 1.5rem; margin: 0.75rem 0; }
+    .ptxt ol li { margin-bottom: 0.75rem; }
+    .ptxt ul { padding-left: 1.5rem; margin: 0.75rem 0; list-style: disc; }
+    .ptxt ul li { margin-bottom: 0.4rem; }
+
+    .side-photos { display: flex; flex-direction: column; gap: 1rem; }
+    .side-photo { width: 100%; border-radius: 3px; border: 1px solid var(--line); display: block; object-fit: cover; height: 200px; }
+
+    /* BOTTOM PHOTOS */
+    .bottom-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .bottom-photos img {
+      width: 100%;
+      border-radius: 3px;
+      border: 1px solid var(--line);
+      display: block;
+      object-fit: cover;
+      height: 220px;
+    }
+
+    .lab-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 12px; color: var(--sage); text-decoration: none; letter-spacing: 0.06em; transition: color 0.2s; margin-top: 0.5rem; }
+    .lab-link:hover { color: var(--sand); }
+
+    @media (max-width: 900px) {
+      .pp { padding: 7rem 1.5rem 4rem; }
+      .header-hero { grid-template-columns: 1fr; gap: 2rem; }
+      .content-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .bottom-photos { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topo-bg" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-100,420 Q180,280 380,400 Q580,520 780,360 Q980,200 1180,380 Q1380,560 1560,340" fill="none" stroke="#C8B89A" stroke-width="0.9"/>
+      <path d="M-100,455 Q180,315 380,435 Q580,555 780,395 Q980,235 1180,415 Q1380,595 1560,375" fill="none" stroke="#C8B89A" stroke-width="0.9"/>
+      <path d="M-100,490 Q180,350 380,470 Q580,590 780,430 Q980,270 1180,450 Q1380,630 1560,410" fill="none" stroke="#7A8C6E" stroke-width="0.7"/>
+    </svg>
+  </div>
+
+  <nav id="main-nav" class="scrolled">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">KR <span>/ Ecology &amp; GIS</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#portfolio">Projects</a></li>
+        <li><a href="../index.html#resume">CV</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="pp">
+
+    <a href="../index.html#portfolio" class="project-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
+      Back to Projects
+    </a>
+
+    <!-- HEADER LEFT / HERO IMAGE RIGHT -->
+    <div class="header-hero">
+      <div class="ph">
+        <p class="section-eyebrow">Field &amp; Lab Research · Kansas Biological Survey · 2021 – 2022</p>
+        <h1>Bever-Schultz Ecology Lab<br><em style="font-style:italic; color: var(--sand);">Research Assistantship</em></h1>
+        <div class="pmeta">
+          <div class="mi"><span class="ml">Lab</span><span class="mv">Bever-Schultz Ecology Lab</span></div>
+          <div class="mi"><span class="ml">Supervisor</span><span class="mv">Dr. Jim Bever</span></div>
+          <div class="mi"><span class="ml">Institution</span><span class="mv">Kansas Biological Survey, University of Kansas</span></div>
+          <div class="mi"><span class="ml">Duration</span><span class="mv">2021 – January 2022 · Part-time (school year) · Full-time (summer)</span></div>
+        </div>
+      </div>
+      <img src="lab_field_liatris.jpg" alt="Prairie research plots with Liatris in bloom" class="hero-img">
+    </div>
+
+    <!-- TEXT LEFT / FIELD PLOTS PHOTO RIGHT -->
+    <div class="content-grid">
+      <div class="ptxt">
+        <p>From 2021 to January 2022 I worked in the Bever-Schultz ecology lab (part time during the school year and full time in the summer) as a research assistant under the supervision of Dr. Jim Bever. I assisted with ecological research studying plant and microbial interactions. Specifically, the research focused on:</p>
+
+        <ol>
+          <li><strong>Soil Community Dynamics:</strong> How host plant presence affects soil community composition and how that altered soil community feeds back to impact host plant health. Additionally, how this negative feedback cycle scales up to influence broader plant community biodiversity.</li>
+          <li><strong>Arbuscular Mycorrhizal Fungi (AMF) Restoration Ecology:</strong> How the presence of AMF fungi affects biodiversity restoration efforts on post-agricultural prairie landscapes.</li>
+        </ol>
+
+        <p>In this lab my responsibilities included:</p>
+
+        <ul>
+          <li>Maintained research plots</li>
+          <li>Performed non-destructive vegetation sampling</li>
+          <li>Identified and sorted plant species</li>
+          <li>Extracted spores from soil samples</li>
+          <li>Collected and entered data</li>
+        </ul>
+
+        <a href="https://bever-schultzlab.weebly.com" target="_blank" rel="noopener" class="lab-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Visit the Bever-Schultz Lab
+        </a>
+      </div>
+
+      <!-- FIELD PLOTS + SPORE PHOTOS RIGHT -->
+      <div class="side-photos">
+        <img src="lab_field_plots.jpg" alt="Prairie research plots" class="side-photo">
+        <img src="lab_spores.jpg" alt="Arbuscular mycorrhizal fungi spores under microscope" class="side-photo">
+      </div>
+    </div>
+
+    <!-- SORTING + TEAM PHOTOS AT BOTTOM -->
+    <div class="bottom-photos">
+      <img src="lab_sorting.jpg" alt="Vegetation sorting and identification in the lab">
+      <img src="lab_team_setup.jpg" alt="Team setting up field experiment infrastructure">
+    </div>
+
+  </main>
+
+  <footer style="position: relative; z-index: 1;">
+    <div class="footer-inner">
+      <p class="footer-left">Kaitlyn Rawlings &mdash; Restoration Ecology &amp; GIS</p>
+      <p class="footer-right"><a href="../index.html" style="color: var(--muted); text-decoration: none;">← Back to Portfolio</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+  </script>
+</body>
+</html>
